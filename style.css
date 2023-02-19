@@ -1,0 +1,359 @@
+*{
+    font-family: 'Comfortaa', cursive;
+}
+/* для всіх кнопок */
+button{
+    cursor: pointer;
+}
+/* Вибір тексту */
+*::selection{
+    background:slategray;
+    color: rgb(255, 255, 255);
+}
+/* Прелоадер -- загругка сайту */
+.preloader.hide{
+    opacity: 0;
+    z-index: 0;
+}
+/* Початковий блок з кнопкою заказування */
+.block-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('./image/1669958914_46-pibig-info-p-temno-zelenie-oboi-na-rabochii-stol-instag-52.jpg');
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+/* Другий блок оформлення */
+.block-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    background-size: cover;
+    background:darkslategray;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+/* рекст 1 блоку */
+.bl1-content h1{
+    color: white;
+    border: solid 7px white;
+    padding: 15px;
+    background: rgba(47, 79, 79, 0.516);
+}
+/* Кнопка 'замовити сайт' */
+.block-2 #btn-of-site{
+    background: rgb(255, 255, 255);
+    font-size: 24px;
+    padding: 15px 20px;
+    border: none;
+    transition: all .25s ease;
+}
+
+.block-2 #btn-of-site:hover{
+    box-shadow: 0 0 1px 5px rgb(220, 220, 220);
+}
+
+.block-2 #btn-of-siteton:active{
+    background: rgb(255, 255, 255);
+}
+
+.zamovte-site h1{
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.reg-site{
+    width: 50%;
+    height: 2px;
+    background: white;
+}
+
+.block-2.close .zamovte-site{
+    display: block;
+}
+
+.block-2.act .zamovte-site{
+    display: none;
+}
+/* 2 */
+.block-reg.act{
+    display: block;
+}
+/* 2 */
+.block-reg {
+    width: 400px;
+    height: 650px;
+    background: rgb(183, 183, 183);
+    padding: 15px 50px;
+    position: relative;
+    display: none;
+}
+
+.block-reg h2{
+    font-weight: 400;
+}
+
+.block-reg input,
+.block-reg select{
+    width: 350px;
+    height: 20px;
+    padding: 10px 15px;
+    margin: 0;
+    outline: none;
+    border: 0;
+    font-size: 20px;
+    transition: .25s;
+}
+
+.block-reg input:active,
+.block-reg input:focus,
+.block-reg select:active,
+.block-reg select:focus{
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 5px rgb(139, 139, 139);
+}
+/* кнопка готово - заказати сайт */
+.block-reg #btn-submit:hover, .btn-open-I-site:hover{
+    box-shadow: 0 0 1px 3px rgb(220 220 220);
+}
+
+.block-reg #btn-submit{
+    margin-top: 15px;
+    height: 40px;
+    width: 125px;
+    font-size: 18px;
+    font-weight: 500;
+    background: white;
+    border: none;
+    transition: .25s;
+}
+.block-reg #btn-submit:active{
+    box-shadow: 0 0 0 4px rgb(139, 139, 139);
+}
+.block-reg select{
+    height: 45px;
+    width: 380px;
+    font-size: 20px;
+    padding: 5px 15px;
+}
+
+/* кнопка назад */
+.btn-close{
+    background: url('./image/close_FILL0_wght400_GRAD0_opsz48.png'); 
+    height: 40px;
+    width: 40px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    background-size: cover;
+    outline: none;
+    border: none;
+    display: block;
+    transition: all .25s ease .25s;
+}
+
+.btn-close:active,
+.cust-alert-close:active{
+    transform: rotate(-90deg);
+    opacity: 0;
+    transition: all .25s ease;
+}
+
+/* інпути ховер ефект */
+.block-reg input:hover{
+    transform: translateY(-2px);
+    color: darkslategray;
+    text-shadow: 2px 1px 2px rgba(21, 147, 151, 0.431);
+    transition: all .4s ease;
+}
+
+/*  кнопка наші роботи  */
+.btn-open-I-site{
+    background: white;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 0;
+    width: 155px;
+    height: 40px;
+    padding: 1px 6px;
+    transition: all .25s ease;
+}
+.btn-open-I-site:active{
+    box-shadow: 0 0 0 4px rgb(139 139 139);
+}
+
+/* OUR-WORCS  -- Контактні данні */
+.our-works{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(139, 139, 139);
+    z-index: 10000;
+    transform: translateX(-100%);
+    transition: .25s;
+    opacity: 0;
+}
+.our-works.act{
+    transform: translateX(-0%);
+    left: 0;
+    opacity: 1;
+}
+
+/* our - works  ---- BTN */
+.our-works-close{
+    background: url("./image/close_FILL0_wght400_GRAD0_opsz48.png");
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: none;
+    color: rgb(0, 0, 0);
+    right: 0;
+    position: absolute;
+    transition: all .25s ease .25s;
+}
+
+.our-works-close:active{
+    transform: rotate(-90deg);
+    transition: all .25s ease;
+}
+
+.our-works header{
+    position: absolute;
+    background: rgb(139, 139, 139);
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.145);
+}
+
+
+.preloader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    transition: ease .15s;
+}
+.preloader img{
+    width: 250px;
+}
+
+.custom-alert{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(151, 151, 151, 0.714);
+    width: 100%;
+    height: 100%;
+    z-index: 1000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -110;
+    transition: all .25s ease;
+}
+
+.custom-alert.act{
+    opacity: 1;
+    z-index: 1000;
+    transition: all .25s ease;
+
+}
+
+.cust-alert-conteiner{
+    background: white;
+    width: 550px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 0 3px -3px rgba(0, 0, 0, 0.197);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cust-alert-conteiner h1{
+    font-size: 28px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.cust-alert-close{
+    background: url('./image/close_FILL0_wght400_GRAD0_opsz48.png');
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all .25s ease .25s;
+}
+
+ @media (max-width: 1040px) {    
+    .cont{
+        position: absolute;
+        width: 100%;
+        height: 200vh;
+        top: 0;
+        left: 0;
+        /* display: flex; */
+    }
+    .block-1{
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        position: absolute;
+        /* min-height: 100vh; */
+    }
+    .block-2{
+        
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        bottom: 0;
+        transform: translateY(100vh);
+        position: absolute;
+        z-index: 100;
+    }
+    /* .zamovte-site{} */
+    .zamovte-site h1{
+        margin: 10px 50px;
+    }
+    #btn-of-site{
+        margin: 0 50px;
+    }
+}
+@media (max-height: 700px){
+    .block-reg h2{
+        margin: 10px 0;
+    }
+    .block-2 .block-reg{
+        height: 510px;
+    }
+}
+
+
